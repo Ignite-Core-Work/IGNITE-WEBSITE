@@ -1,4 +1,8 @@
 
+.for-conatct{
+    margin-top: 20rem;
+    background-color: aliceblue;
+}
 
 input{
     color: var(--text-black-700);

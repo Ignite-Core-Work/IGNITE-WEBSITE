@@ -5,6 +5,7 @@ import './Activities.css';
 import hack from '../../assets/hackathon.jpg';
 import tresure from '../../assets/treasure.jpg';
 import ideathon from '../../assets/ideathon.jpg';
+import NavComponent from '../../components/NavBar/NavComponent';
 
 const Activities = () => {
   const activityData = [
@@ -27,7 +28,11 @@ const Activities = () => {
   ];
 
   return (
-    <div className='for-activities'>
+    <>
+    <NavComponent/>
+     <h1 className='for-heading-in-team'>Activities</h1>
+     <div className='for-activities'>
+     
       {activityData.map((activity, index) => (
         <div key={index} className="activity-card">
           <img src={activity.image} alt={`Activity ${index + 1}`} className="activity-image" />
@@ -38,6 +43,7 @@ const Activities = () => {
         </div>
       ))}
     </div>
+    </>
   );
 };
 
