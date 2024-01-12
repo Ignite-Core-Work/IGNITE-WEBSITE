@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 
 
 
+
 const NavComponent = ({isHomePage}) => {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   return (
@@ -20,9 +21,13 @@ const NavComponent = ({isHomePage}) => {
     
       <nav className="main-nav">
         {/* 1st logo part  */}
-        <div className="logo">
-          <img className="logo" src={img1} alt="logo" onClick={`${RoutePrefix}/${RouteName.Home}`}/>
-        </div>
+        {/* 1st logo part  */}
+<div className="logo">
+  <Link to={`${RoutePrefix}/${RouteName.Home}`}>
+    <img className="logo" src={img1} alt="logo" />
+  </Link>
+</div>
+
 
         {/* 2nd menu part  */}
         <div
